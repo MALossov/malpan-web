@@ -56,7 +56,7 @@
       <el-progress
         :percentage="storagePercentage"
         :color="storageColor"
-        :show-text="false"
+        :show-text="storagePercentage"
       ></el-progress>
       <div class="text">
         <span>存储</span>
@@ -81,13 +81,14 @@ export default {
   data() {
     return {
       isCollapse: false, //  控制菜单收缩展开
-      storageMaxValue: Math.pow(1024, 3) * 1, //  最大存储容量，1GB
+      storageMaxValue: Math.pow(1024, 3), //  最大存储容量，1GB
       //  自定义进度条颜色，不同占比，进度条颜色不同
       storageColor: [
         { color: '#67C23A', percentage: 50 },
         { color: '#E6A23C', percentage: 80 },
         { color: '#F56C6C', percentage: 100 }
-      ]
+      ],
+      showPercent:false,
     }
   },
   computed: {

@@ -171,7 +171,7 @@ export default {
     getStorageValue() {
       getFileStorage().then((res) => {
         if (res.success) {
-          this.storageValue = res.data ? Number(res.data.storageSize) : 0
+          this.storageValue = res.data ? Number(res.data) : 0
         } else {
           this.$message.error(res.message)
         }

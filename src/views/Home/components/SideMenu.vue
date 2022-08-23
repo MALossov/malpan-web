@@ -56,7 +56,7 @@
       <el-progress
         :percentage="storagePercentage"
         :color="storageColor"
-        :show-text="storagePercentage"
+        :show-text="false"
       ></el-progress>
       <div class="text">
         <span>存储</span>
